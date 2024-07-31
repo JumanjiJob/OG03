@@ -8,11 +8,11 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600                                               # Задаем размеры экрана
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))   # Создаем экран с заданными размерами (размеры передаются в виде кортежа)
 pygame.display.set_caption("Игра Тир")                            # Название окна
-icon = pygame.image.load("img/icon.jpg")                          # Создаем иконку нашей игры
+icon = pygame.image.load("../HW_OG03/img/img/icon.jpg")                          # Создаем иконку нашей игры
 pygame.display.set_icon(icon)                                     # Вызываем иконку
 
-target_img = pygame.image.load("img/target.png")                  # Картинка цели (утка)
-target_img_1 = pygame.image.load("img/target_1.png")              # Картинка подбитой цели (подбитая утка)
+target_img = pygame.image.load("../HW_OG03/img/img/target.png")                  # Картинка цели (утка)
+target_img_1 = pygame.image.load("../HW_OG03/img/img/target_1.png")              # Картинка подбитой цели (подбитая утка)
 target_width = 80                                                 # Размеры цели (утки)
 target_height = 80
 
@@ -28,7 +28,7 @@ color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
 
 pygame.mouse.set_visible(False)                                    # Отключаем видимость курсора мыши
 
-cursor_img = pygame.image.load("img/cursor.png")                   # Картинка-прицел
+cursor_img = pygame.image.load("../HW_OG03/img/img/cursor.png")                   # Картинка-прицел
 cursor_width, cursor_height = cursor_img.get_size()                # Передаем ширину и высоту загруженного изображения курсора
 
 # Счетчик попаданий
@@ -52,7 +52,7 @@ while running:                                                     # Основ�
                 screen.blit(cursor_img, (mouse_x - cursor_width // 2, mouse_y - cursor_height // 2))  # Отрисовка курсора (прицела) на опр-ых координатах
                 pygame.display.update()                             # Обновление экрана
                 pygame.time.delay(200)                              # Задержка на 200 мс
-                target_img = pygame.image.load("img/target.png")    # смена изображения цели обратно на target_img
+                target_img = pygame.image.load("../HW_OG03/img/img/target.png")    # смена изображения цели обратно на target_img
                 target_x = random.randint(0, SCREEN_WIDTH - target_width)  # Новое перемещение цели на новые рандомные координаты
                 target_y = random.randint(0, SCREEN_HEIGHT - target_height)
 
