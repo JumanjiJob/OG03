@@ -13,8 +13,7 @@ pygame.display.set_icon(icon)                                     # Вызыва
 
 target_img = pygame.image.load("img/target.png")                  # Картинка цели (утка)
 target_img_1 = pygame.image.load("img/target_1.png")              # Картинка подбитой цели (подбитая утка)
-target_width = 80                                                 # Размеры цели (утки)
-target_height = 80
+target_width, target_height = target_img.get_size()               # Размеры цели (утки)
 
 target_speed_x = 5
 target_speed_y = 5
